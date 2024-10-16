@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { AddCategory, GifGrid } from './components';
+import { getCategory } from './helpers/getCategory';
 
 const GifExpertApp = () => {
-  const [categories, setCategories] = useState(['Dogs']);
+  const randomCategory = getCategory();
+  const [categories, setCategories] = useState([randomCategory]);
 
   const onAddCategories = (category) => {
     if(categories.includes(category)) return;
-
     setCategories([category, ...categories]);
   };
 
