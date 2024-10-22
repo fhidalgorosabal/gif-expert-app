@@ -1,6 +1,7 @@
 import { PropTypes } from 'prop-types';
 import { GifItem } from './GifItem';
 import { useFetchGifs } from '../hooks/useFetchGifs';
+import { SpinnerComp } from './SpinnerComp';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
@@ -10,7 +11,7 @@ export const GifGrid = ({category}) => {
     return (
         <Container>
             <h3 className="my-3">{ category.toString().toUpperCase() }</h3>
-            { isLoading && ( <h2>Cargando...</h2> ) }
+            { isLoading && ( <SpinnerComp></SpinnerComp> ) }
             <Row>
                 { 
                     images.map(image => ( 

@@ -11,7 +11,7 @@ export const NavBar = ({ onAddCategories }) => {
     <Navbar bg="dark" data-bs-theme="dark">
       <Container fluid={ true }>
         <Navbar.Brand>
-          <Image src="../../public/icon.png" alt="GE" width="40"/><span className="align-text-top"> Gif Expert App</span>
+          <Image src="/images/icon.png" alt="GE" width="40"/><span className="align-text-top"> Gif Expert App</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -26,5 +26,5 @@ export const NavBar = ({ onAddCategories }) => {
 };
 
 NavBar.propTypes = {
-  onAddCategories: PropTypes.string.isRequired
+  onAddCategories: PropTypes.func.isRequired
 };
