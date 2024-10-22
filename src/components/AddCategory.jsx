@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { PropTypes } from 'prop-types';
+import Form from 'react-bootstrap/Form';
 
 export const AddCategory = ({ onNewCategory }) => {
   const [inputValue, setInputValue] = useState('');
@@ -17,17 +18,21 @@ export const AddCategory = ({ onNewCategory }) => {
   };
 
   return (
-    <form onSubmit={ onSubmit }>
-        <input 
-            type="text" 
-            placeholder="Buscar gifs" 
-            value={ inputValue } 
-            onChange={ onInputChange }
+    <>    
+      <Form className="d-flex w-50" onSubmit={ onSubmit }>
+        <Form.Control
+          type="text"
+          size="lg"
+          placeholder="Buscar gifs"
+          aria-label="Search"
+          value={ inputValue } 
+          onChange={ onInputChange }
         />
-    </form>
+      </Form>
+    </>  
   )
 };
 
 AddCategory.propTypes = {
-  onNewCategory: PropTypes.string.isRequired
+  onNewCategory: PropTypes.func.isRequired
 };
