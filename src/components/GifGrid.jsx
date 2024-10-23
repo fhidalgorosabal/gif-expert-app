@@ -2,8 +2,7 @@ import { PropTypes } from 'prop-types';
 import { GifItem } from './GifItem';
 import { useFetchGifs } from '../hooks/useFetchGifs';
 import { SpinnerComp } from './SpinnerComp';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
+import { Container, Row } from 'react-bootstrap';
 
 export const GifGrid = ({category}) => {
     const { images, isLoading } = useFetchGifs( category );

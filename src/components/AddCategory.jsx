@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { PropTypes } from 'prop-types';
-import Form from 'react-bootstrap/Form';
+import { Form } from 'react-bootstrap';
 
 export const AddCategory = ({ onNewCategory }) => {
   const [inputValue, setInputValue] = useState('');
