@@ -11,6 +11,14 @@ Aplicación desarrollada en **React** como parte del curso _"React: De cero a ex
 - **Bootstrap**
 - **ESLint**
 
+---   
+
+## Aplicación
+
+Puedes acceder a la aplicación desplegada aquí: [Gif Expert App](https://gif-expert-app-lake.vercel.app/)
+
+![Gif Expert App](public/images/screenshot/app.png)
+
 ---
 
 ## Autor
